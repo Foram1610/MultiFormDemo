@@ -1,0 +1,85 @@
+.tag{
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.card{
+    border: 1px solid #333;
+    border-radius: .5rem;
+    padding: .5rem;
+    max-width: 400px;
+    margin: 0 auto;
+    animation: fade 250ms ease-in-out forwards;
+}
+
+.multi-step-form{
+    overflow: hidden;
+    position: relative;
+}
+
+.card.active{
+    animation: slide 500ms 250ms ease-in-out both;
+}
+
+.hide{display: none;}
+
+@keyframes slide {
+    0%{
+        transform: translateX(200%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(.75);
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+
+
+.step-title{
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .5rem;
+    gap: .25em;
+}
+
+.form-group:last-child{
+    margin: 0;
+}
+
+.form-group > label{
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group > input,select{
+    border: 1px solid #333;
+    border-radius: .25em;
+    font-size: 1rem;
+    padding: .25em;
+}
